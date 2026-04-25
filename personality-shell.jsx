@@ -79,8 +79,8 @@ function ProgressBar({ visited }) {
 function Sidebar({ current, visited, onNav, open, onClose }) {
   return (
     <>
-      {/* Overlay on mobile */}
-      {open && (
+      {/* Overlay on mobile only */}
+      {open && window.innerWidth < 768 && (
         <div onClick={onClose} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', zIndex: 40 }} />
       )}
       <nav style={{
