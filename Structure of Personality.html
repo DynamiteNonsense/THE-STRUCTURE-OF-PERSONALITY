@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Структура Личности — Интерактивный Курс</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow: hidden; background: #0c0c1d; }
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #0c0c1d; }
+    ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: #818cf8; }
+
+    .grad-text {
+      background: linear-gradient(90deg, #6366f1, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .grad-border {
+      background: linear-gradient(#161630, #161630) padding-box,
+                  linear-gradient(90deg, #6366f1, #22d3ee) border-box;
+      border: 1px solid transparent;
+    }
+    .grad-border-violet {
+      background: linear-gradient(#161630, #161630) padding-box,
+                  linear-gradient(90deg, #a78bfa, #6366f1) border-box;
+      border: 1px solid transparent;
+    }
+    .section-in {
+      animation: secIn 0.35s cubic-bezier(.25,.8,.25,1) both;
+    }
+    @keyframes secIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .nav-item {
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .nav-item:hover { background: rgba(99,102,241,0.08) !important; }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(99,102,241,0.15); }
+    .accordion-content {
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    button { font-family: inherit; }
+    input[type="checkbox"] { accent-color: #6366f1; width: 16px; height: 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="personality-shell.jsx"></script>
+  <script type="text/babel" src="personality-sections-a.jsx"></script>
+  <script type="text/babel" src="personality-sections-b.jsx"></script>
+  <script type="text/babel" src="personality-app.jsx"></script>
+</body>
+</html>
